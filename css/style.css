@@ -1,0 +1,456 @@
+/* ==============================
+   La Musa Incarnata - Estilo artístico
+   ============================== */
+
+:root {
+    --fondo: #0f0f12;
+    --texto: #f1f1f1;
+    --acento: #9bc47a;
+    --secundario: #6c6c8b;
+    --secundarioOscuro: #4a4765;
+    --transparente: rgba(255, 255, 255, 0.05);
+}
+
+/* ========= RESET ========= */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========= BASE ========= */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    background-color: var(--fondo);
+    color: var(--texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ========= HEADER ========= */
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid var(--secundario);
+    background-color: var(--transparente);
+}
+
+.header__logo {
+    max-width: 180px;
+    filter: drop-shadow(0 0 8px var(--acento));
+}
+
+.header__titulo {
+    font-family: 'Staatliches', cursive;
+    font-size: 3.5rem;
+    color: var(--acento);
+    letter-spacing: 2px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* ========= HERO ========= */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, rgba(155, 196, 122, 0.1), transparent);
+}
+
+.hero h2 {
+    color: var(--acento);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 70rem;
+    margin: 0 auto;
+    font-style: italic;
+    color: var(--texto);
+    opacity: 0.9;
+}
+
+/* ========= PRODUCTOS ========= */
+#productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    margin-top: 4rem;
+    max-width: 1000px;
+    /* <--- limita el ancho total del grid */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.producto {
+    background: #1a1a20;
+    border: 1px solid var(--secundario);
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(155, 196, 122, 0.3);
+}
+
+.producto img {
+    max-width: 90%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.producto h3 {
+    color: var(--acento);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.producto p {
+    color: var(--texto);
+    font-size: 1.4rem;
+    opacity: 0.85;
+}
+
+/* ========= BOTONES ========= */
+button {
+    background: var(--secundario);
+    color: var(--texto);
+    border: none;
+    padding: 8px 14px;
+    margin: 6px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--secundarioOscuro);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(155, 196, 122, 0.4);
+}
+
+/* ========= LINKS ========= */
+a {
+    text-decoration: none;
+    color: var(--acento);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--texto);
+}
+
+/* ========= CARRITO ========= */
+#lista-carrito {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: var(--texto);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+#contador-carrito {
+    transition: transform 0.2s ease;
+}
+
+#contador-carrito.agregado {
+    transform: scale(1.5);
+    color: var(--acento);
+}
+.carrito-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* ========= DETALLE ========= */
+#detalle {
+    text-align: center;
+    padding: 3rem;
+}
+
+#detalle h2 {
+    color: var(--acento);
+}
+
+#detalle p {
+    max-width: 70rem;
+    margin: 1rem auto;
+    color: var(--texto);
+}
+
+/* ========= FOOTER ========= */
+footer {
+    color: var(--texto);
+    margin-top: auto;
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #141418;
+    border-top: 1px solid var(--secundario);
+}
+
+footer a {
+    color: var(--acento);
+    margin: 0 10px;
+    font-size: 1.6rem;
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 768px) {
+    .producto {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .header__titulo {
+        font-size: 2.4rem;
+    }
+
+    .hero {
+        padding: 4rem 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+}
+.quienes {
+    max-width: 900px;
+    margin: 6rem auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.quienes p {
+    color: var(--texto);
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.quienes__img {
+    margin-top: 2rem;
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(155, 196, 122, 0.3);
+}
+.politicas {
+    max-width: 800px;
+    margin: 6rem auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.politicas h2,
+.politicas h3 {
+    color: var(--acento);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.politicas p {
+    color: var(--texto);
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+}
+
+.politicas a {
+    color: var(--acento);
+    font-weight: 600;
+}
+.footer {
+    background-color: #141418;
+    border-top: 1px solid var(--secundario);
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--texto);
+}
+
+.footer__texto {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer__nav a {
+    color: var(--acento);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.footer__nav a:hover {
+    color: var(--texto);
+}
+.botones-pago {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.botones-pago {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.boton-pago {
+    display: inline-block;
+    background-color: var(--acento);
+    color: var(--fondo);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: fit-content;
+    /* <--- hace que se ajusten al texto */
+    min-width: 220px;
+    /* ancho mínimo para consistencia */
+    max-width: 300px;
+    /* <--- limita el ancho máximo */
+}
+
+.boton-pago:hover {
+    background-color: var(--texto);
+    color: var(--fondo);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(155, 196, 122, 0.4);
+}
+.carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carrito__items {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(155, 196, 122, 0.1);
+    max-height: 400px;
+    /* 🔹 límite de altura */
+    overflow-y: auto;
+    /* 🔹 scroll si hay muchos productos */
+}
+
+.carrito__resumen {
+    width: 100%;
+    background: #1a1a20;
+    border: 1px solid var(--secundario);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(155, 196, 122, 0.15);
+}
+
+.carrito__resumen p#total {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--acento);
+    margin-bottom: 1.5rem;
+}
+
+.carrito__botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.carrito__botones button {
+    background-color: var(--secundario);
+    color: var(--texto);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carrito__botones button:hover {
+    background-color: var(--secundarioOscuro);
+    transform: scale(1.05);
+}
+
+/* Mantiene tus botones de pago */
+.botones-pago {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.boton-pago {
+    display: inline-block;
+    background-color: var(--acento);
+    color: var(--fondo);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: fit-content;
+    min-width: 220px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.boton-pago:hover {
+    background-color: var(--texto);
+    color: var(--fondo);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(155, 196, 122, 0.4);
+}

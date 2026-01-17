@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "nombre": "VUE.JS",
+    "descripcionCorta": "Camiseta de algodón 100%",
+    "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles.Ideal para uso diario.",
+    "precio": 50,
+    "imagen": "img/1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "REACT.JS",
+    "descripcionCorta": "Camiseta de algodón 100%",
+    "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
+    "precio": 70,
+    "imagen": "img/2.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "NODE.JS",
+    "descripcionCorta": "Camiseta de algodón 100%",
+    "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
+    "precio": 50,
+    "imagen": "img/3.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "HTML5",
+    "descripcionCorta": "Camiseta de algodón 100%",
+    "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
+    "precio": 30,
+    "imagen": "img/4.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "GITHUB",
+    "descripcionCorta": "Camiseta de algodón 100%",
+    "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
+    "precio": 40,
+    "imagen": "img/5.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "TYPESCRIPT",
+    "descripcionCorta": "Camiseta de algodón 100%",
+    "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
+    "precio": 50,
+    "imagen": "img/6.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "JAVASCRIPT",
+    "descripcionCorta": "Camiseta de algodón 100%",
+    "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
+    "precio": 70,
+    "imagen": "img/7.jpg"
+  }
+]
