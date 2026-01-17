@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "nombre": "VUE.JS",
+    "nombre": "MOMO",
     "descripcionCorta": "Camiseta de algodón 100%",
     "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles.Ideal para uso diario.",
     "precio": 50,
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "nombre": "REACT.JS",
+    "nombre": "MOMO",
     "descripcionCorta": "Camiseta de algodón 100%",
     "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
     "precio": 70,
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "nombre": "NODE.JS",
+    "nombre": "ELODION",
     "descripcionCorta": "Camiseta de algodón 100%",
     "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
     "precio": 50,
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "nombre": "HTML5",
+    "nombre": "LA MUSA",
     "descripcionCorta": "Camiseta de algodón 100%",
     "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
     "precio": 30,
@@ -33,7 +33,7 @@
   },
   {
     "id": 5,
-    "nombre": "GITHUB",
+    "nombre": "ELODION",
     "descripcionCorta": "Camiseta de algodón 100%",
     "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
     "precio": 40,
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "nombre": "TYPESCRIPT",
+    "nombre": "LA MUSA",
     "descripcionCorta": "Camiseta de algodón 100%",
     "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
     "precio": 50,
@@ -49,7 +49,7 @@
   },
   {
     "id": 7,
-    "nombre": "JAVASCRIPT",
+    "nombre": "LA MUSA",
     "descripcionCorta": "Camiseta de algodón 100%",
     "descripcionLarga": "Camiseta de algodón suave, disponible en varios colores y talles. Ideal para uso diario.",
     "precio": 70,

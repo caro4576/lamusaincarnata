@@ -151,10 +151,30 @@ button {
     transition: all 0.3s ease;
 }
 
-button:hover {
-    background: var(--secundarioOscuro);
+.boton-volver {
+    display: inline-block;
+    background-color: var(--secundario);
+    color: var(--texto);
+    font-weight: 500;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: fit-content;
+    margin: 2rem auto;
+    font-size: 1.6rem;
+}
+.detalle__volver {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.boton-volver:hover {
+    background-color: var(--secundarioOscuro);
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(155, 196, 122, 0.4);
+    box-shadow: 0 0 10px rgba(155, 196, 122, 0.3);
 }
 
 /* ========= LINKS ========= */
