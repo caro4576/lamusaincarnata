@@ -1,7 +1,8 @@
 /* ==============================
-   La Musa Incarnata - Estilo artístico
+   🎨 LA MUSA INCARNATA - ESTILO GENERAL
    ============================== */
 
+/* ---------- VARIABLES ---------- */
 :root {
     --fondo: #0f0f12;
     --texto: #f1f1f1;
@@ -11,7 +12,7 @@
     --transparente: rgba(255, 255, 255, 0.05);
 }
 
-/* ========= RESET ========= */
+/* ---------- RESET ---------- */
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -26,11 +27,14 @@ html {
     padding: 0;
 }
 
-/* ========= BASE ========= */
+/* ==============================
+   🔤 BASE TIPOGRÁFICA Y ESTRUCTURA
+   ============================== */
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
     background-color: var(--fondo);
     color: var(--texto);
     min-height: 100vh;
@@ -39,13 +43,35 @@ body {
     overflow-x: hidden;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Staatliches', cursive;
+    color: var(--acento);
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+p {
+    color: var(--texto);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+section {
+    margin-bottom: 5rem;
+}
+
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
     padding: 2rem;
 }
 
-/* ========= HEADER ========= */
+/* ==============================
+   🧭 HEADER
+   ============================== */
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -70,11 +96,20 @@ body {
     text-align: center;
 }
 
-/* ========= HERO ========= */
+/* ==============================
+   🪶 HERO
+   ============================== */
 .hero {
     text-align: center;
-    padding: 6rem 2rem;
-    background: linear-gradient(180deg, rgba(155, 196, 122, 0.1), transparent);
+    padding: 5rem 2rem;
+    margin-top: 5rem;
+    background: linear-gradient(180deg, rgba(107, 146, 83, 0.15), rgba(0, 0, 0, 0.8));
+    color: var(--acento);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-top: 1px solid rgba(155, 196, 122, 0.2);
+    border-bottom: none;
 }
 
 .hero h2 {
@@ -91,17 +126,16 @@ body {
     opacity: 0.9;
 }
 
-/* ========= PRODUCTOS ========= */
+/* ==============================
+   🛍️ PRODUCTOS
+   ============================== */
 #productos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     justify-content: center;
-    margin-top: 4rem;
+    margin: 4rem auto;
     max-width: 1000px;
-    /* <--- limita el ancho total del grid */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .producto {
@@ -113,6 +147,10 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     padding: 1.5rem;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .producto:hover {
@@ -129,7 +167,6 @@ body {
 .producto h3 {
     color: var(--acento);
     font-size: 2rem;
-    margin-bottom: 0.5rem;
 }
 
 .producto p {
@@ -138,7 +175,13 @@ body {
     opacity: 0.85;
 }
 
-/* ========= BOTONES ========= */
+.producto button {
+    margin: 0.4rem 0;
+}
+
+/* ==============================
+   🎛️ BOTONES Y LINKS
+   ============================== */
 button {
     background: var(--secundario);
     color: var(--texto);
@@ -151,12 +194,17 @@ button {
     transition: all 0.3s ease;
 }
 
+button:hover {
+    background-color: var(--secundarioOscuro);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(155, 196, 122, 0.3);
+}
+
 .boton-volver {
     display: inline-block;
     background-color: var(--secundario);
     color: var(--texto);
     font-weight: 500;
-    border: none;
     padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
@@ -166,18 +214,12 @@ button {
     margin: 2rem auto;
     font-size: 1.6rem;
 }
+
 .detalle__volver {
     text-align: center;
     margin-top: 2rem;
 }
 
-.boton-volver:hover {
-    background-color: var(--secundarioOscuro);
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(155, 196, 122, 0.3);
-}
-
-/* ========= LINKS ========= */
 a {
     text-decoration: none;
     color: var(--acento);
@@ -189,14 +231,33 @@ a:hover {
     color: var(--texto);
 }
 
-/* ========= CARRITO ========= */
+/* ==============================
+   🛒 CARRITO
+   ============================== */
+.carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 2rem auto 5rem auto;
+}
+
 #lista-carrito {
     margin-top: 30px;
     font-size: 1.8rem;
     color: var(--texto);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--transparente);
     border-radius: 8px;
     padding: 1.5rem;
+}
+
+.carrito-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
 #contador-carrito {
@@ -207,17 +268,98 @@ a:hover {
     transform: scale(1.5);
     color: var(--acento);
 }
-.carrito-img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 6px;
+
+/* ----- Bloques internos del carrito ----- */
+.carrito__items {
+    width: 100%;
+    background: var(--transparente);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(155, 196, 122, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
 }
 
-/* ========= DETALLE ========= */
-#detalle {
+.carrito__resumen {
+    width: 100%;
+    background: #1a1a20;
+    border: 1px solid var(--secundario);
+    border-radius: 10px;
+    padding: 2rem;
     text-align: center;
-    padding: 3rem;
+    box-shadow: 0 0 10px rgba(155, 196, 122, 0.15);
+    margin-bottom: 4rem;
+}
+
+.carrito__resumen p#total {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--acento);
+    margin-bottom: 1.5rem;
+}
+
+.carrito__botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.carrito__botones button {
+    background-color: var(--secundario);
+    color: var(--texto);
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carrito__botones button:hover {
+    background-color: var(--secundarioOscuro);
+    transform: scale(1.05);
+}
+
+/* ----- Botones de pago ----- */
+.botones-pago {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.boton-pago {
+    display: inline-block;
+    background-color: var(--acento);
+    color: var(--fondo);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 220px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.boton-pago:hover {
+    background-color: var(--texto);
+    color: var(--fondo);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(155, 196, 122, 0.4);
+}
+
+/* ==============================
+   📄 DETALLE DE PRODUCTO
+   ============================== */
+#detalle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 #detalle h2 {
@@ -230,61 +372,62 @@ a:hover {
     color: var(--texto);
 }
 
-/* ========= FOOTER ========= */
-footer {
-    color: var(--texto);
-    margin-top: auto;
-    text-align: center;
-    padding: 3rem 2rem;
-    background-color: #141418;
-    border-top: 1px solid var(--secundario);
+#detalle button {
+    margin: 0.3rem 0;
 }
 
-footer a {
-    color: var(--acento);
-    margin: 0 10px;
-    font-size: 1.6rem;
-}
-
-/* ========= RESPONSIVE ========= */
-@media (max-width: 768px) {
-    .producto {
-        width: 90%;
-        max-width: 320px;
-    }
-
-    .header__titulo {
-        font-size: 2.4rem;
-    }
-
-    .hero {
-        padding: 4rem 1.5rem;
-    }
-
-    .hero h2 {
-        font-size: 2.2rem;
-    }
-}
+/* ==============================
+   💬 QUIÉNES SOMOS
+   ============================== */
 .quienes {
-    max-width: 900px;
-    margin: 6rem auto;
+    max-width: 1000px;
+    margin: 8rem auto 6rem auto;
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, rgba(107, 146, 83, 0.08), rgba(0, 0, 0, 0.8));
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(155, 196, 122, 0.15);
     text-align: center;
-    line-height: 1.8;
+    animation: fadeUp 1.2s ease forwards;
+    border-top: 1px solid rgba(155, 196, 122, 0.15);
+    border-bottom: 1px solid rgba(155, 196, 122, 0.15);
+}
+
+.quienes__lema {
+    font-family: 'Staatliches', cursive;
+    color: var(--acento);
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    text-shadow: 0 0 8px rgba(155, 196, 122, 0.25);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.quienes h2 {
+    color: var(--acento);
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
 }
 
 .quienes p {
     color: var(--texto);
-    opacity: 0.85;
-    margin-bottom: 1.5rem;
+    opacity: 0.9;
     font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
 }
 
 .quienes__img {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     max-width: 80%;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(155, 196, 122, 0.3);
+    box-shadow: 0 0 20px rgba(155, 196, 122, 0.25);
 }
+
+/* ==============================
+   ⚖️ POLÍTICAS
+   ============================== */
 .politicas {
     max-width: 800px;
     margin: 6rem auto;
@@ -309,11 +452,16 @@ footer a {
     color: var(--acento);
     font-weight: 600;
 }
+
+/* ==============================
+   🦶 FOOTER
+   ============================== */
 .footer {
     background-color: #141418;
-    border-top: 1px solid var(--secundario);
+    border-top: 1px solid rgba(155, 196, 122, 0.2);
     text-align: center;
     padding: 3rem 1rem;
+    margin-top: 5rem;
     color: var(--texto);
 }
 
@@ -340,137 +488,86 @@ footer a {
 .footer__nav a:hover {
     color: var(--texto);
 }
-.botones-pago {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
+
+/* ==============================
+   🎬 ANIMACIONES
+   ============================== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.botones-pago {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.boton-pago {
-    display: inline-block;
-    background-color: var(--acento);
-    color: var(--fondo);
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    text-align: center;
-    width: fit-content;
-    /* <--- hace que se ajusten al texto */
-    min-width: 220px;
-    /* ancho mínimo para consistencia */
-    max-width: 300px;
-    /* <--- limita el ancho máximo */
-}
+/* ==============================
+   📱 RESPONSIVE
+   ============================== */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.5rem;
+    }
 
-.boton-pago:hover {
-    background-color: var(--texto);
-    color: var(--fondo);
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(155, 196, 122, 0.4);
-}
-.carrito {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    padding: 4rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
+    h1 {
+        font-size: 2.6rem;
+        margin-bottom: 1.2rem;
+    }
 
-.carrito__items {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 0 15px rgba(155, 196, 122, 0.1);
-    max-height: 400px;
-    /* 🔹 límite de altura */
-    overflow-y: auto;
-    /* 🔹 scroll si hay muchos productos */
-}
+    h2 {
+        font-size: 2.2rem;
+    }
 
-.carrito__resumen {
-    width: 100%;
-    background: #1a1a20;
-    border: 1px solid var(--secundario);
-    border-radius: 10px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(155, 196, 122, 0.15);
-}
+    p {
+        font-size: 1.5rem;
+    }
 
-.carrito__resumen p#total {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--acento);
-    margin-bottom: 1.5rem;
-}
+    .header__titulo {
+        font-size: 2.4rem;
+    }
 
-.carrito__botones {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
+    .hero {
+        padding: 6rem 1.5rem;
+    }
 
-.carrito__botones button {
-    background-color: var(--secundario);
-    color: var(--texto);
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+    .hero h2 {
+        font-size: 2.2rem;
+    }
 
-.carrito__botones button:hover {
-    background-color: var(--secundarioOscuro);
-    transform: scale(1.05);
-}
+    #productos {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+    }
 
-/* Mantiene tus botones de pago */
-.botones-pago {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
+    .producto {
+        width: 90%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
 
-.boton-pago {
-    display: inline-block;
-    background-color: var(--acento);
-    color: var(--fondo);
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    width: fit-content;
-    min-width: 220px;
-    max-width: 300px;
-    text-align: center;
-}
+    button,
+    .boton-pago {
+        padding: 8px 14px;
+        font-size: 1.4rem;
+    }
 
-.boton-pago:hover {
-    background-color: var(--texto);
-    color: var(--fondo);
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(155, 196, 122, 0.4);
+    .footer__nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
