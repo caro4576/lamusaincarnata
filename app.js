@@ -19,9 +19,8 @@ function cargarProductos() {
 }
 
 // ==============================
-// AGREGAR AL CARRITO
+// 🛒 AGREGAR PRODUCTO AL CARRITO
 // ==============================
-
 function agregarAlCarrito(id, nombre, precio, imagen) {
   let producto = carrito.find((item) => item.id === id);
 
@@ -33,7 +32,32 @@ function agregarAlCarrito(id, nombre, precio, imagen) {
 
   localStorage.setItem("carrito", JSON.stringify(carrito));
   actualizarContador();
+
+  // 💬 Mensaje visual elegante al agregar
+  mostrarMensaje(`${nombre} fue agregado al carrito 🛒`);
 }
+
+// ==============================
+// 💬 MENSAJE VISUAL DE CONFIRMACIÓN
+// ==============================
+function mostrarMensaje(texto) {
+  const aviso = document.createElement("div");
+  aviso.classList.add("toast-mensaje");
+  aviso.textContent = texto;
+
+  document.body.appendChild(aviso);
+
+  // Mostrar con animación
+  setTimeout(() => aviso.classList.add("visible"), 50);
+
+  // Ocultar y eliminar después de 2.5 segundos
+  setTimeout(() => {
+    aviso.classList.remove("visible");
+    setTimeout(() => aviso.remove(), 500);
+  }, 2500);
+}
+
+
 
 // ==============================
 // ELIMINAR PRODUCTOS DEL CARRITO
@@ -223,6 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (document.body.contains(document.getElementById("detalle"))) {
     cargarDetalleProducto();
+    actualizarContador()
   }
 
   if (document.body.contains(document.getElementById("lista-carrito"))) {
@@ -241,3 +266,28 @@ document.addEventListener("DOMContentLoaded", () => {
       .addEventListener("click", () => (window.location.href = "index.html"));
   }
 });
+
+function mostrarMensaje(texto) {
+  const aviso = document.createElement("div");
+  aviso.textContent = texto;
+  aviso.style.position = "fixed";
+  aviso.style.bottom = "30px";
+  aviso.style.right = "30px";
+  aviso.style.background = "rgba(155,196,122,0.95)";
+  aviso.style.color = "#0f0f12";
+  aviso.style.padding = "12px 18px";
+  aviso.style.borderRadius = "6px";
+  aviso.style.fontSize = "1.4rem";
+  aviso.style.boxShadow = "0 0 10px rgba(155,196,122,0.4)";
+  aviso.style.zIndex = "1000";
+  aviso.style.transition = "opacity 0.5s ease";
+  aviso.style.opacity = "1";
+
+  document.body.appendChild(aviso);
+
+  setTimeout(() => {
+    aviso.style.opacity = "0";
+    setTimeout(() => aviso.remove(), 500);
+  }, 2000);
+}
+
