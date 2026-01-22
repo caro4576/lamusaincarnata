@@ -395,7 +395,7 @@ a:hover {
 }
 
 .quienes__lema {
-    font-family: 'Staatliches', cursive;
+    font-family: 'unispace', monospace;
     color: var(--acento);
     font-size: 1.8rem;
     letter-spacing: 1.5px;
@@ -585,7 +585,43 @@ button,
     flex-direction: column;
     gap: 0.5rem;
 }
+/* ==============================
+   👩‍💻 Créditos Desarrolladora
+   ============================== */
+.creditos {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(155, 196, 122, 0.25);
+    background: rgba(15, 15, 18, 0.4);
+    backdrop-filter: blur(4px);
+}
 
+.creditos p {
+    font-size: 1.5rem;
+    color: var(--texto);
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+}
+
+.creditos__link {
+    color: var(--acento);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.creditos__link:hover {
+    color: var(--texto);
+    text-shadow: 0 0 8px rgba(155, 196, 122, 0.4);
+}
+
+/* 📱 Ajuste móvil */
+@media (max-width: 600px) {
+    .creditos p {
+        font-size: 1.3rem;
+    }
+}
 
 /* ====== AJUSTES RESPONSIVE FINOS ====== */
 @media (max-width: 600px) {
@@ -790,4 +826,28 @@ button,
     .video-fondo__overlay p {
         font-size: 1.4rem;
     }
+}
+.proyecto {
+    max-width: 900px;
+    margin: 6rem auto;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(155, 196, 122, 0.25);
+    border-bottom: 1px solid rgba(155, 196, 122, 0.25);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(155, 196, 122, 0.1);
+}
+
+.proyecto h2 {
+    color: var(--acento);
+    font-family: 'unispace', monospace;
+    margin-bottom: 1.5rem;
+}
+
+.proyecto p {
+    color: var(--texto);
+    opacity: 0.85;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
 }
